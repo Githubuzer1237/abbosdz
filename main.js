@@ -1,20 +1,37 @@
+const burger = document.querySelector('.burger')
+const nav = document.querySelector('.nav')
 
-const liElements = [
-    document.querySelector('#li1'),
-    document.querySelector('#li2'),
-    document.querySelector('#li3')
-];
 
-const items = [
-    prompt('Первый товар'),
-    prompt('Второй товар'),
-    prompt('Третий товар')
-];
+burger.addEventListener('click', () => {
+    nav.classList.toggle('active')
+})
 
-liElements.forEach((li, index) => {
-    li.innerHTML = items[index];
-    li.addEventListener('click', () => {
-        li.innerHTML = 'Куплено!';
-        li.classList.add('green')
-    });
+
+
+
+
+const swiperAlbum1 = new Swiper('.swiper-album-1', {
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+    },
+    allowTouchMove: false,
+
+    speed: 20000
+});
+
+
+const swiperAlbum2 = new Swiper('.swiper-album-2', {
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        reverseDirection: true
+    },
+    allowTouchMove: false,
+
+    speed: 20000
 });

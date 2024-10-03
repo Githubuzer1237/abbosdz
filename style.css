@@ -1,23 +1,241 @@
-.cont {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+}
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+body {
+    background-image: url(./img/bg-1.png);
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+    color: #251607;
+}
+.header {
+    padding: 20px 0;
+    @media (max-width: 700px) {
+        background-image: url(./img/bg-2.png);
+        background-position: center ;
+    }
 }
 
-li {
-    border: 2px solid black;
-    padding: 10px;
-     width: 300px;
-     text-align: center;
-     transition: 0.5s;
-}
-ul {
+.nav {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+transition: 0.5s;
+    @media (max-width: 700px) {
+        /* display: none; */
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        background-color: #251607;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    
+        
+        &.active {
+       top: 0;
+        }
+    }
+    a {
+        text-transform: uppercase;
+        text-decoration: none;
+    color: #251607;
+font-size: 25px;
+font-weight: 500;
+@media (max-width: 700px) {
+   color: #fff;
 }
-.green {
-    background-color: rgb(44, 218, 44);
+    }
 }
+.header__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.logo,
+ .burger {
+    display: none;
+    @media (max-width: 700px) {
+        display: block;
+        z-index: 11;
+    }
+}
+
+
+.hero {
+    padding: 30px 0;
+}
+
+.hero__wrapper {
+    text-align: center;
+ 
+    p {
+        font-size: 22px;
+        text-transform: uppercase;
+        margin: 20px 0;
+        font-weight: 500;
+
+    }
+    img {
+        width: 100%;
+    }
+   div {
+    display: flex;
+    justify-content: space-between;
+   }
+}
+
+
+
+
+
+.album {
+    padding: 50px 0;
+    .container {
+        max-width: 1900px;
+    }
+}
+
+.swiper-slide {
+    img {
+        width: 100%;
+    }
+}
+
+
+
+.meet {
+    padding: 50px 0;
+    .haru-img {
+        max-width: 704px;
+        width: 100%;
+
+    }
+    .meetharu-img {
+        max-width: 946px;
+        width: 100%;
+        
+    }
+    .boykurit {
+      max-width: 946px;
+      width: 100%;
+        
+    }
+    
+}
+
+.meet__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    column-gap: 60px;
+@media (max-width: 1300px) {
+    grid-template-columns: 1fr;
+    column-gap: 120px;
+    
+
+    .haru {
+        order: 2;
+    }
+    .meetharu {
+        order: 1;
+    }
+}
+    .haru {
+        p {
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+    }
+    .meetharu {
+        padding: 80px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 260px;
+        @media (max-width: 1300px) {
+            gap: 80px;
+            
+        }
+        p {
+            font-size: 75px;
+            text-transform: uppercase;
+            font-weight: bold;
+            @media (max-width: 1300px) {
+                font-size: 50px;
+                
+            }
+            @media (max-width: 800px) {
+                font-size: 30px;
+                
+            }
+        }
+    }
+}
+
+
+.plan {
+    padding: 30px 0;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    h3 {
+        text-align: center;
+    }
+    h2 {
+        max-width: 300px;
+        width: 100%;
+    }
+    p {
+        max-width: 300px;
+
+        width: 100%;
+    }
+    .text {
+        display: flex;
+        justify-content: space-between;
+    }
+    .plans {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        column-gap: 10px;
+    }
+}
+
+.card-1 {
+    background-image: url(./img/tree.png);
+    background-size: cover;
+    height: 400px;
+}
+.card-2 {
+    background-image: url(./img/tree-2.png);
+}
+.card-3 {
+    background-image: url(./img/incubator.png);
+}
+.card-4 {
+    background-image: url(./img/capital.png);
+}
+.card-5 {
+    background-image: url(./img/collection.png);
+}
+    .plan__wrapper {
+        display: flex;
+
+    }
