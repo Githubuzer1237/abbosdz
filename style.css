@@ -214,22 +214,21 @@ font-weight: 500;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
-        column-gap: 10px;
+        column-gap: 80px;
+        margin-left: 100px;
     }
 }
 
 .card-1 {
     background-image: url(./img/tree.png);
-    background-size: cover;
-    height: 400px;
 }
 .card-2 {
     background-image: url(./img/tree-2.png);
 }
-.card-3 {
+.card-4 {
     background-image: url(./img/incubator.png);
 }
-.card-4 {
+.card-3 {
     background-image: url(./img/capital.png);
 }
 .card-5 {
@@ -238,4 +237,52 @@ font-weight: 500;
     .plan__wrapper {
         display: flex;
 
+    }
+    .card {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        min-height: 400px;
+        border: 3px solid black;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: beige;
+        transition: 0.3s;
+        &:hover {
+            p {
+                max-height: 30px;
+                overflow: visible;
+            }
+            h2 {
+                font-size: 38px;
+
+            }
+        }
+        p {
+            color: gray;
+            margin-top: 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.2s;
+        }
+        h2 {
+            transition: 0.2s;
+        }
+    }
+    .treecard {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        min-height: 900px;
+        border: 3px solid black;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: beige;
+        p {
+            color: gray;
+        }
     }
